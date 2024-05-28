@@ -39,6 +39,11 @@ commit-checks: format type lint
 doc:
 	cd docs && make html
 
+precommit:
+	pip install pre-commit &&\
+	pre-commit install &&\
+	pre-commit run -a
+
 spelling:
 	cd docs && make spelling
 
